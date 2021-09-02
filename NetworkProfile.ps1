@@ -1,24 +1,3 @@
-﻿##################################################################################################
-## Check Network Profile Settings - Change Network Profile Settings if they are wrong
-##
-## Language: Win10/Srv2016/64 
-##
-## Title: Network Profile Settings
-##
-## Parent: -
-##
-## Purpose: Changing the network profile settings if they are not correct. 
-##
-## Comments: Script checks if the IP Address was set correct at the installation. Checks if the
-##           client is set to DHCP. Checks if the installation IP and the current IP are the same.
-##           Changes the Network Profile if it is set to public. Everything gets listed in the 
-##           EventLog. To open the Eventlog: Get-Eventlog "AM_NetworkLog"
-##
-## Author: Marc Wyler (AAGWMR)
-##
-## Version: 1.0.0
-##################################################################################################
-
 # ------------------------ Create EventLog ------------------------ #
 if ([System.Diagnostics.EventLog]::Exists('AM_NetworkLog') -eq $true) {  
     Write-Host "EventLog IP exists"
